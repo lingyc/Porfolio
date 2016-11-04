@@ -8,7 +8,6 @@ class AppComponent extends Component {
   render() {
     return (
       <div className="index">
-        <div className="notice">finally going</div>
         <LogoComponent/>
       </div>
     );

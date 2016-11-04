@@ -20,24 +20,37 @@
   background: #666;
 }*/
 
-#Layer_1 {
+.majorLine {
   stroke: black;
   stroke-width:1;
   fill:none;
   stroke-linejoin:round;
 }
 
-#Layer_2 {
+.minorLine {
   stroke: #939598;
   stroke-width:.3;
   fill:none;
 }
 
 .SVGLogo {
-  position: absolute;
-  left: 50%;
-  right: 50%;
   stroke-dasharray: 300;
   stroke-dashoffset: 300;
 }
 
+.logoLayer_3 {
+}
+
+.logoLayer_2 {
+  transform: translate(21.7px, 0px)
+}
+
+.logoLayer_1 {
+  transform: translate(0px, 0px)
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
