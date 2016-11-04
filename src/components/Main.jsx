@@ -1,14 +1,15 @@
 require('normalize.css/normalize.css');
-// require('styles/App.css');
+require('styles/App.css');
 
-import React from 'react';
+import React, { Component } from 'react';
+import LogoComponent from './logo';
 
-
-class AppComponent extends React.Component {
+class AppComponent extends Component {
   render() {
     return (
       <div className="index">
         <div className="notice">finally going</div>
+        <LogoComponent/>
       </div>
     );
   }

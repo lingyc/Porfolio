@@ -1,5 +1,5 @@
 /* Base Application Styles */
-body {
+/*body {
   color: #fff;
   background: #222;
 }
@@ -18,4 +18,26 @@ body {
   border: 1px solid #000;
   border-width: 1px 0;
   background: #666;
+}*/
+
+#Layer_1 {
+  stroke: black;
+  stroke-width:1;
+  fill:none;
+  stroke-linejoin:round;
 }
+
+#Layer_2 {
+  stroke: #939598;
+  stroke-width:.3;
+  fill:none;
+}
+
+.SVGLogo {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+}
+
