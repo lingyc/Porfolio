@@ -1,39 +1,26 @@
-/* Base Application Styles */
-/*body {
-  color: #fff;
-  background: #222;
+body {
+  /*width: 100%;*/
+  /*height: 100%;*/
+  background: white;
 }
 
-.index img {
-  margin: 40px auto;
-  border-radius: 4px;
-  background: #fff;
-  display: block;
-}
-
-.index .notice {
-  margin: 20px auto;
-  padding: 15px 0;
-  text-align: center;
-  border: 1px solid #000;
-  border-width: 1px 0;
-  background: #666;
-}*/
-
+/*logo*/
 .majorLine {
-  stroke: black;
+  stroke: white;
   stroke-width:1;
   fill:none;
   stroke-linejoin:round;
 }
 
 .minorLine {
-  stroke: #939598;
+  stroke: #aaa;
   stroke-width:.3;
   fill:none;
 }
 
 .SVGLogo {
+  padding-top: 10px;
+  padding-bottom: ;
   stroke-dasharray: 300;
   stroke-dashoffset: 300;
 }
@@ -53,4 +40,32 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+}
+
+.myName {
+  font: 100 10px Lato;
+  color: cyan;
+  padding-top: 50px;
+}
+
+
+/*TopSection*/
+.TopSection {
+  background: black;
+  width: 100%;
+  height: 100%;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  color: white;
+}
+
+.nav li {
+  padding-left: 10px;
+  padding-right: 10px;
 }
