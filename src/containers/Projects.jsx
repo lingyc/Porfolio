@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
+import ProjectTile from '../ProjectTile';
 
-class Projects extends Component {
-	render() {
-		return (
-			<div className="projects">
-
-			</div>
-		);
-	}
+const Projects = (props) => {
+	return (
+		<div className="projects">
+			{props.projects.map((project) => <ProjectTile/>)}
+		</div>
+	);
 }
 
 export default Projects;

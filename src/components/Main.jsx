@@ -12,7 +12,8 @@ class AppComponent extends Component {
 		super(props);
 		this.state = {
 			navPanelOpen: false,
-			openingEnd: false
+			openingEnd: false,
+			focal: null,
 		}	
 	}
 

@@ -22,6 +22,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -49,14 +50,12 @@ table {
 
 /*logo*/
 .majorLine {
-  /*stroke: #00C8C8;*/
   stroke-width:3;
   fill:none;
   stroke-linejoin:round;
 }
 
 .minorLine {
-  /*stroke: black;*/
   stroke-width:.5;
   fill:none;
 }
@@ -65,17 +64,6 @@ table {
   padding-top: 10px;
   stroke-dasharray: 300;
   stroke-dashoffset: 300;
-}
-
-.logoLayer_3 {
-}
-
-.logoLayer_2 {
-  transform: translate(21.7px, 0px)
-}
-
-.logoLayer_1 {
-  transform: translate(0px, 0px)
 }
 
 .container {
@@ -90,14 +78,8 @@ table {
   color: cyan;
   padding-top: 50px;
 }
+/*logo*/
 
-.nav {
-  position: fixed;
-  height: 100%;
-  width: 5%;
-  background-color: white;
-  border-right: .5px grey;
-}
 
 /*.nav ul {
   display: flex;
@@ -107,22 +89,48 @@ table {
   color: white;
 }*/
 
-/*.nav li {
-  font: 100 12px Lato;
-  padding-left: 10px;
-  padding-right: 10px;
-}*/
 
 .hero {
   background-image: url("../images/wood-texture.jpg");
   background-size: cover;
-  height: 730px;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainMsg {
+  color: white;
+  text-align: center;
+}
+
+.mainMsg h3{
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.mainMsg h1{
+  font-size: 100px;
+}
+
+/*nav panel*/
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: fixed;
+  height: 100%;
+  width: 5%;
+  background-color: white;
+  border-right: .5px grey;
 }
 
 .invisiblePanel {
   position: fixed;
   height: 100%;
   width: 5%;
+  left: 0%;
 }
 
 .menuBtn {
@@ -134,6 +142,24 @@ table {
   top: 9%;
   cursor: pointer;
 }
+
+.menuItems {
+  position: absolute;
+  font: 400 15px Helvetica;
+  right: 40%;
+  text-align: left;
+  top: 30%;
+}
+
+.menuItems li {
+  margin-top: 20px;
+}
+
+.menuItems a {
+  color: black;
+}
+
+/*nav panel*/
 
 .projects {
   background-color: #f2f2f2;

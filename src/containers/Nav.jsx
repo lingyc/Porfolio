@@ -25,16 +25,21 @@ class Nav extends Component {
 
 	render() {
 		console.log(this.props.navPanelOpen);
+		const menu = (
+			<ul className="menuItems">
+				<li><Link to="top"> HOME </Link></li>
+				<li><Link to="projects"> PROJECTS </Link></li>
+				<li><Link to="about"> ABOUT </Link></li>
+			</ul>
+		);
+
 		return (
-			<VelocityComponent animation={(this.props.navPanelOpen) ? {width: '15%'} : {width: '5%'}} duration={400}>
+			<VelocityComponent animation={(this.props.navPanelOpen) ? {width: '20%'} : {width: '5%'}} duration={200}>
 				<nav className="nav" style={{width: '5%'}}>
 					<div className="invisiblePanel">
 						{this.renderMenuBtn()}
 					</div>
-					{/*<Link to="top"> Go to top </Link>
-					<Link to="a"> Go to a </Link>
-					<Link to="b"> Go to b </Link>
-					<Link to="c"> Go to c </Link>*/}
+					{(this.props.navPanelOpen) ? menu : ''}
 				</nav>
 			</VelocityComponent>
 		);

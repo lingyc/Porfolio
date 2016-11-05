@@ -30,49 +30,65 @@ class LogoComponent extends Component {
 		}
 	}
 
-	hoverAnimationProps() {
+	animatePropsMajor() {
 		if (this.state.hover && this.state.openSequenceDone) {
 			return	{
 				animation: {
 					...accent,
 			    'stroke-width':3
 				},
-				duration: 250
+				duration: 200
 			}
-		} else if (this.state.openSequenceDone) {
+		} else if (this.state.openSequenceDone && !this.props.navPanelOpen) {
 				return {
 					animation: {
 				    ...white,
 				    'stroke-width':2
 					},
-					duration: 250
+					duration: 200
 				}
+		} else if (this.props.navPanelOpen) {
+				return {
+					animation: {
+				    ...black,
+				    'stroke-width':2
+					},
+					duration: 200
+			}
 		} else {
 				return {
 					animation: {
 				    ...accent,
 				    'stroke-width':2
 					},
-					duration: 250
+					duration: 200
 				}
 		}
 	}
 
-	hoverTextProps() {
-		if (this.state.hover && this.state.openSequenceDone) {
-			return	{
+	animatePropsMinor() {
+		if (this.props.navPanelOpen) {
+			return {
 				animation: {
-			    opacity: 1
+			    ...black,
+			    'stroke-dasharray': 1
 				},
-				duration: 250
+				duration: 200
 			}
+		} else if (this.state.openSequenceDone) {
+			return {
+				animation: {
+			    ...white,
+			    'stroke-dasharray': 1
+				},
+				duration: 200
+			}			
 		} else {
 			return {
 				animation: {
-			    opacity: 0
-				},
-				duration: 250
-			}
+			    ...black,
+				}
+			}	
 		}
 	}
 
@@ -86,7 +102,7 @@ class LogoComponent extends Component {
 				onMouseLeave={ () => this.setState({hover: false}) }
 				onClick={ () => this.props.toggleNavPanel() }>
 				
-				<VelocityComponent animation={(this.state.openSequenceDone) ? {...white, 'stroke-dasharray': 1} : black}>
+				<VelocityComponent {...(this.animatePropsMinor())}>
 					<g className="logoLayer_3">
 		      	<VelocityComponent animation={{'x1': 60.415}} duration={minorLineDuration} delay={minorLineDelay} runOnMount={true}>
 							<line className="minorLine shortLine" x1="82.175" y1="48.77" x2="82.175" y2="48.77"/>
@@ -107,10 +123,10 @@ class LogoComponent extends Component {
 	      	<VelocityComponent animation={{'translateX': 0}} duration={600} delay={300} runOnMount={true}>
 	      		<VelocityComponent animation={{'translateX': 21.7}} runOnMount={true}>
 							<g className="logoLayer_2">
-								<VelocityComponent animation={(this.state.openSequenceDone) ? {...white, 'stroke-dasharray': 1} : black}>
+								<VelocityComponent {...(this.animatePropsMinor())}>
 									<polyline className="minorLine" points="38.024,13.835 60.415,48.77 38.024,83.704 	"/>
 								</VelocityComponent>
-								<VelocityComponent {...(this.hoverAnimationProps())}>
+								<VelocityComponent {...(this.animatePropsMajor())}>
 									<polyline className="majorLine" points="38.024,83.704 15.634,48.77 38.024,13.835 	"/>
 								</VelocityComponent>
 							</g>
@@ -118,10 +134,10 @@ class LogoComponent extends Component {
 	      	</VelocityComponent>
 
 					<g className="logoLayer_1">
-						<VelocityComponent animation={(this.state.openSequenceDone) ? {...white, 'stroke-dasharray': 1} : black}>
+						<VelocityComponent {...(this.animatePropsMinor())}>
 							<line className="minorLine" x1="59.784" y1="13.835" x2="82.175" y2="48.77"/>
 						</VelocityComponent>
-						<VelocityComponent {...(this.hoverAnimationProps())}>
+						<VelocityComponent {...(this.animatePropsMajor())}>
 							<polyline className="majorLine" points="82.175,48.77 59.784,83.704 37.393,48.77 59.784,13.835 	"/>
 						</VelocityComponent>
 					</g>
@@ -134,7 +150,7 @@ class LogoComponent extends Component {
     return (
     	<Link to="top">
 				<div style={{position: 'relative', 'zIndex':1}}>
-					<VelocityComponent animation={{left: '10%', width: '11%', height: 'auto'}} duration={700} delay={1700} runOnMount={true} complete={() => { this.setState({openSequenceDone: true}); this.props.openingEnd(); }}>
+					<VelocityComponent animation={{left: '10%', width: '11%', height: 'auto'}} duration={400} delay={1400} runOnMount={true} complete={() => { this.setState({openSequenceDone: true}); this.props.openingEnd(); }}>
 		      	<div style={{transform: 'translate(-50%, 0)', position: 'fixed', left: '50%', width: '30%', height: 'auto'}}>
 			      	<VelocityComponent animation={{'stroke-dashoffset': 0}} duration={1000} delay={500} runOnMount={true}>
 			      			{this.renderSVGLogo()}
