@@ -94,7 +94,7 @@ table {
 .nav {
   position: fixed;
   height: 100%;
-  width: 4%;
+  width: 5%;
   background-color: white;
   border-right: .5px grey;
 }
@@ -119,10 +119,21 @@ table {
   height: 730px;
 }
 
-.hero h1 {
-
+.invisiblePanel {
+  position: fixed;
+  height: 100%;
+  width: 5%;
 }
 
+.menuBtn {
+  transform: translate(-50%, 0);
+  position: absolute;
+  width: 40%;
+  height: auto;
+  left: 50%;
+  top: 9%;
+  cursor: pointer;
+}
 
 .projects {
   background-color: #f2f2f2;

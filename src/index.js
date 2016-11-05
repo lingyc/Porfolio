@@ -16,13 +16,13 @@ render((
   	render={
   		applyRouterMiddleware(useScroll(
   			(prevRouterProps, {location}) => {
-  				if (location.pathname === 'top') {
+  				if (location.pathname === 'top' || location.pathname === '/top') {
   					return [0,0];
-  				} else if (location.pathname === 'a') {
+  				} else if (location.pathname === 'a' || location.pathname === '/a') {
   					return [0,200];
-  				} else if (location.pathname === 'b') {
+  				} else if (location.pathname === 'b' || location.pathname === '/b') {
   					return [0,400];
-  				} else if (location.pathname === 'c') {
+  				} else if (location.pathname === 'c' || location.pathname === '/c') {
   					return [0,800];
   				}
   			})

@@ -49,10 +49,10 @@ class AppComponent extends Component {
 
     return (
       <div className="index">
-				<Logo openingEnd={() => this.openingEnd() } toggleNavPanel={ () => this.toggleNavPanel() }/>
+				<Logo openingEnd={() => this.openingEnd() } navPanelOpen={this.state.navPanelOpen}/>
 				<VelocityComponent {...bodyAnimation}>
 					<div>
-						<Nav/>
+						<Nav navPanelOpen={this.state.navPanelOpen} toggleNavPanel={() => this.toggleNavPanel()}/>
 						{this.props.children}
         	</div>
 				</VelocityComponent>

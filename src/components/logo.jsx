@@ -1,6 +1,8 @@
 import { VelocityComponent } from 'velocity-react';
 import React, { Component } from 'react';
 
+import { Link } from 'react-router';
+
 const black = {
   strokeRed: 0,
   strokeGreen: 0,
@@ -130,15 +132,17 @@ class LogoComponent extends Component {
 
   render() {
     return (
-			<div style={{position: 'relative', 'zIndex':1}}>
-				<VelocityComponent animation={{left: '10%', width: '11%', height: 'auto'}} duration={700} delay={1700} runOnMount={true} complete={() => { this.setState({openSequenceDone: true}); this.props.openingEnd(); }}>
-	      	<div style={{transform: 'translate(-50%, 0)', position: 'fixed', left: '50%', width: '30%', height: 'auto'}}>
-		      	<VelocityComponent animation={{'stroke-dashoffset': 0}} duration={1000} delay={500} runOnMount={true}>
-		      			{this.renderSVGLogo()}
-		      	</VelocityComponent>
-	      	</div>
-		    </VelocityComponent>
-	    </div>
+    	<Link to="top">
+				<div style={{position: 'relative', 'zIndex':1}}>
+					<VelocityComponent animation={{left: '10%', width: '11%', height: 'auto'}} duration={700} delay={1700} runOnMount={true} complete={() => { this.setState({openSequenceDone: true}); this.props.openingEnd(); }}>
+		      	<div style={{transform: 'translate(-50%, 0)', position: 'fixed', left: '50%', width: '30%', height: 'auto'}}>
+			      	<VelocityComponent animation={{'stroke-dashoffset': 0}} duration={1000} delay={500} runOnMount={true}>
+			      			{this.renderSVGLogo()}
+			      	</VelocityComponent>
+		      	</div>
+			    </VelocityComponent>
+		    </div>
+	    </Link>
     );
   }
 }
