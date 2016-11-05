@@ -4,11 +4,11 @@ class Nav extends Component {
 	render() {
 		return (
 			<nav className="nav">
-				<ul>
+				{/*<ul>
 					<li>PROJECTS</li>
 					<li>SKILLS</li>
 					<li>ABOUT</li>
-				</ul>
+				</ul>*/}
 			</nav>
 		);
 	}

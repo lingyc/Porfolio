@@ -81,7 +81,8 @@ class LogoComponent extends Component {
 		return (
 			<svg className="SVGLogo" x="0px" y="0px" width="100%" viewBox="0 0 100 100"
 				onMouseEnter={ () => this.setState({hover: true}) }
-				onMouseLeave={ () => this.setState({hover: false}) }>
+				onMouseLeave={ () => this.setState({hover: false}) }
+				onClick={ () => this.props.toggleNavPanel() }>
 				
 				<VelocityComponent animation={(this.state.openSequenceDone) ? {...white, 'stroke-dasharray': 1} : black}>
 					<g className="logoLayer_3">
@@ -130,8 +131,8 @@ class LogoComponent extends Component {
   render() {
     return (
 			<div style={{position: 'relative', 'zIndex':1}}>
-				<VelocityComponent animation={{left: '18%', width: '15%', height: 'auto'}} duration={700} delay={1700} runOnMount={true} complete={() => { this.setState({openSequenceDone: true}); this.props.openingEnd(); }}>
-	      	<div style={{transform: 'translate(-50%, 0)', position: 'absolute', left: '50%', top: '100%', width: '30%', height: 'auto'}}>
+				<VelocityComponent animation={{left: '10%', width: '11%', height: 'auto'}} duration={700} delay={1700} runOnMount={true} complete={() => { this.setState({openSequenceDone: true}); this.props.openingEnd(); }}>
+	      	<div style={{transform: 'translate(-50%, 0)', position: 'fixed', left: '50%', width: '30%', height: 'auto'}}>
 		      	<VelocityComponent animation={{'stroke-dashoffset': 0}} duration={1000} delay={500} runOnMount={true}>
 		      			{this.renderSVGLogo()}
 		      	</VelocityComponent>

@@ -49,15 +49,15 @@ table {
 
 /*logo*/
 .majorLine {
-  stroke: black;
-  stroke-width:1;
+  /*stroke: #00C8C8;*/
+  stroke-width:3;
   fill:none;
   stroke-linejoin:round;
 }
 
 .minorLine {
-  stroke: black;
-  stroke-width:.3;
+  /*stroke: black;*/
+  stroke-width:.5;
   fill:none;
 }
 
@@ -91,39 +91,40 @@ table {
   padding-top: 50px;
 }
 
-
-/*TopSection*/
-.TopSection {
-  background: black;
-  width: 100%;
+.nav {
+  position: fixed;
   height: 100%;
+  width: 4%;
+  background-color: white;
+  border-right: .5px grey;
 }
 
-.nav ul {
+/*.nav ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
   list-style-type: none;
   color: white;
-}
+}*/
 
-.nav li {
+/*.nav li {
   font: 100 12px Lato;
   padding-left: 10px;
   padding-right: 10px;
-}
+}*/
 
 .hero {
   background-image: url("../images/wood-texture.jpg");
   background-size: cover;
-  height: 500px;
+  height: 730px;
 }
 
 .hero h1 {
 
 }
 
-#dsfs {
-  color: white;
-  background: black;
+
+.projects {
+  background-color: #f2f2f2;
+  height: 1000px;
 }
