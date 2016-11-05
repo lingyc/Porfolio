@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Logo from '../components/Logo';
 import Nav from '../containers/Nav';
+import Hero from '../containers/Hero';
 import { VelocityComponent } from 'velocity-react';
 
 class TopSection extends Component {
@@ -34,10 +35,15 @@ class TopSection extends Component {
 		}
 
 		return (
-			<div className="TopSection">
-				<Logo openingEnd={() => this.openingEnd() }/>
+			<div>
+				<div className="TopSection">
+					<Logo openingEnd={() => this.openingEnd() }/>
+					{/*<VelocityComponent {...bodyAnimation}>
+						<Nav/>
+					</VelocityComponent>*/}
+				</div>
 				<VelocityComponent {...bodyAnimation}>
-					<Nav/>
+					<Hero/>
 				</VelocityComponent>
 			</div>
 		)

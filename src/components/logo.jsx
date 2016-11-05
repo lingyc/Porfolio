@@ -24,9 +24,9 @@ class LogoComponent extends Component {
 		} else {
 			return {
 				animation: {
-			    strokeRed: 255,
-			    strokeGreen: 255,
-			    strokeBlue: 255,
+			    strokeRed: 0,
+			    strokeGreen: 0,
+			    strokeBlue: 0,
 			    'stroke-width':1
 				},
 				duration: 250
@@ -57,7 +57,7 @@ class LogoComponent extends Component {
 		let minorLineDelay = 1800;
 
 		return (
-			<svg className="SVGLogo" x="0px" y="0px" width="500px" height="500px" viewBox="0 0 100 100"
+			<svg className="SVGLogo" x="0px" y="0px" width="700px" height="700px" viewBox="0 0 100 100"
 				onMouseEnter={ () => this.setState({hover: true}) }
 				onMouseLeave={ () => this.setState({hover: false}) }>
 				
@@ -101,27 +101,19 @@ class LogoComponent extends Component {
 
   render() {
     return (
-      <div className="container">
-      	<VelocityComponent {...(this.hoverTextProps())}>
-			    	<div className="myName firstName">
-			    		
-			    	</div>
-		    </VelocityComponent>
-
-      	<VelocityComponent animation={{width: 100, height: 100}} duration={1000} delay={100} runOnMount={true} complete={() => { this.setState({openSequenceDone: true}); this.props.openingEnd(); } }>
-	      	<VelocityComponent animation={{width: 500, height: 500}} duration={0} delay={0} runOnMount={true}>
-		      	<VelocityComponent animation={{'stroke-dashoffset': 0}} duration={2000} delay={1000} runOnMount={true}>
-		      			{this.renderSVGLogo()}
-		      	</VelocityComponent>
-	      	</VelocityComponent>
-	    	</VelocityComponent>
-
-      	<VelocityComponent {...(this.hoverTextProps())}>
-		    	<div className="myName lastName">
-		    		
-		    	</div>
-		    </VelocityComponent>
-      </div>
+    		<div style={{position: 'relative'}}>
+		    	<VelocityComponent animation={{left: '20%'}} justifyContent={'flex-start'} duration={1000} delay={1000} runOnMount={true}>
+			      <div className="container" style={{display: 'flex', 'flexDirection': 'row', 'justifyContent': 'center', position: 'absolute', margin: '0 auto', width: '700px', 'margin-left':-350, left: '50%'}}>
+			      	<VelocityComponent animation={{width: 100, height: 100, 'align-self': 'flex-start'}} duration={1000} delay={100} runOnMount={true} complete={() => { this.setState({openSequenceDone: true}); this.props.openingEnd(); } }>
+				      	<VelocityComponent animation={{width: 700, height: 700}} duration={0} delay={0} runOnMount={true}>
+					      	<VelocityComponent animation={{'stroke-dashoffset': 0}} duration={2000} delay={1000} runOnMount={true}>
+					      			{this.renderSVGLogo()}
+					      	</VelocityComponent>
+				      	</VelocityComponent>
+				    	</VelocityComponent>
+			      </div>
+			    </VelocityComponent>
+		    </div>
     );
   }
 }
