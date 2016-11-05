@@ -5,8 +5,6 @@ import React, { Component } from 'react';
 import { VelocityComponent } from 'velocity-react';
 
 import Logo from '../components/Logo';
-import Hero from '../containers/Hero';
-import Projects from '../containers/Projects';
 import Nav from '../containers/Nav';
 
 class AppComponent extends Component {
@@ -55,8 +53,7 @@ class AppComponent extends Component {
 				<VelocityComponent {...bodyAnimation}>
 					<div>
 						<Nav/>
-						<Hero/>
-	        	<Projects/>
+						{this.props.children}
         	</div>
 				</VelocityComponent>
       </div>
