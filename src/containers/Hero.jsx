@@ -5,8 +5,8 @@ class Hero extends Component {
 		return (
 			<div className="hero">
 				<div className="mainMsg">
-					<h3>Web Developer</h3>
-					<h1>Porfolio</h1>
+					<h3>LING CHEN</h3>
+					<h1>Web Developer<br/>Porfolio</h1>
 				</div>
 			</div>
 		);

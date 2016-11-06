@@ -6,7 +6,7 @@ class Nav extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			hover: false,
+			hover: false
 		}
 	}
 
@@ -24,7 +24,6 @@ class Nav extends Component {
 	}
 
 	render() {
-		console.log(this.props.navPanelOpen);
 		const menu = (
 			<ul className="menuItems">
 				<li><Link to="top"> HOME </Link></li>

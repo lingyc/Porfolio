@@ -82,13 +82,13 @@ class LogoComponent extends Component {
 			    'stroke-dasharray': 1
 				},
 				duration: 200
-			}			
+			}
 		} else {
 			return {
 				animation: {
-			    ...black,
+			    ...black
 				}
-			}	
+			}
 		}
 	}
 
@@ -149,7 +149,7 @@ class LogoComponent extends Component {
   render() {
     return (
     	<Link to="top">
-				<div style={{position: 'relative', 'zIndex':1}}>
+				<div style={{position: 'relative', 'zIndex':3}}>
 					<VelocityComponent animation={{left: '10%', width: '11%', height: 'auto'}} duration={400} delay={1400} runOnMount={true} complete={() => { this.setState({openSequenceDone: true}); this.props.openingEnd(); }}>
 		      	<div style={{transform: 'translate(-50%, 0)', position: 'fixed', left: '50%', width: '30%', height: 'auto'}}>
 			      	<VelocityComponent animation={{'stroke-dashoffset': 0}} duration={1000} delay={500} runOnMount={true}>

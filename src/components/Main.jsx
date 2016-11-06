@@ -6,6 +6,7 @@ import { VelocityComponent } from 'velocity-react';
 
 import Logo from '../components/Logo';
 import Nav from '../containers/Nav';
+import projectData from '../temp/data';
 
 class AppComponent extends Component {
 	constructor(props) {
@@ -13,8 +14,9 @@ class AppComponent extends Component {
 		this.state = {
 			navPanelOpen: false,
 			openingEnd: false,
-			focal: null,
-		}	
+			focalProject: null,
+			projectData: projectData
+		}
 	}
 
 	toggleNavPanel() {
@@ -29,18 +31,24 @@ class AppComponent extends Component {
 		});
 	}
 
+	trackFocalProject(id) {
+		this.setState({
+			focal: id
+		});
+	}
+
   render() {
 
 		let bodyAnimation;
 		if (this.state.openingEnd) {
-			bodyAnimation = { 
+			bodyAnimation = {
 				animation: {
 			    opacity: 1
 				},
 				duration: 250
 			}
 		} else {
-			bodyAnimation = { 
+			bodyAnimation = {
 				animation: {
 			    opacity: 0
 				},
@@ -54,7 +62,11 @@ class AppComponent extends Component {
 				<VelocityComponent {...bodyAnimation}>
 					<div>
 						<Nav navPanelOpen={this.state.navPanelOpen} toggleNavPanel={() => this.toggleNavPanel()}/>
-						{this.props.children}
+						{React.cloneElement(this.props.children, {
+              projects: this.state.projectData,
+              trackFocalProject: this.trackFocalProject.bind(this),
+              focalProject: this.state.focalProject
+            })}
         	</div>
 				</VelocityComponent>
       </div>
