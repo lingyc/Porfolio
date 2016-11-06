@@ -15,7 +15,8 @@ class AppComponent extends Component {
 			navPanelOpen: false,
 			openingEnd: false,
 			focalProject: null,
-			projectData: projectData
+			projectClicked: false,
+			projectData: projectData,
 		}
 	}
 
@@ -33,12 +34,18 @@ class AppComponent extends Component {
 
 	trackFocalProject(id) {
 		this.setState({
-			focal: id
+			focalProject: id
 		});
 	}
 
-  render() {
+	handleProjectClicked(bool) {
+		this.setState({
+			projectClicked: bool
+		});
+	}
 
+
+  render() {
 		let bodyAnimation;
 		if (this.state.openingEnd) {
 			bodyAnimation = {
@@ -65,7 +72,9 @@ class AppComponent extends Component {
 						{React.cloneElement(this.props.children, {
               projects: this.state.projectData,
               trackFocalProject: this.trackFocalProject.bind(this),
-              focalProject: this.state.focalProject
+              focalProject: this.state.focalProject,
+              projectClicked: this.state.projectClicked,
+              handleProjectClicked: this.handleProjectClicked.bind(this)
             })}
         	</div>
 				</VelocityComponent>

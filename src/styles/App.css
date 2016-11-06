@@ -99,7 +99,7 @@ table {
   align-items: center;
   justify-content: center;
   width: 95%;
-  transform: translate(5%, 0);
+  transform: translate(5.2%, 0);
 }
 
 .mainMsg {
@@ -125,8 +125,8 @@ table {
   position: fixed;
   height: 100%;
   width: 5%;
-  background-color: white;
-  border-right: .5px grey;
+  background-color: rgba(255, 255, 255, 0.9);
+  /*border-right: .5px grey;*/
 }
 
 .invisiblePanel {
@@ -173,7 +173,7 @@ table {
   flex-wrap: wrap;
   background-color: #e2e2e2;
   width: 95%;
-  transform: translate(5%, 0);
+  transform: translate(5.2%, 0);
   padding-bottom: 30px;
 }
 
@@ -189,12 +189,21 @@ table {
   /*margin-top: 30px;*/
 }
 
-
-.textGroup {
+.textGroupOuter {
+  background-color: rgba(0, 0, 0, 0.6); 
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
+  width: 100%;
+  height: 100%;
   position: absolute;
+}
+
+.textGroupInner {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
 }
 
 /*projects section*/

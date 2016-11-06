@@ -12,7 +12,13 @@ class Home extends Component {
 	 	return (
 		 	<div>
 		 		<Hero/>
-		    <Projects projects={this.props.projects} trackFocalProject={this.props.trackFocalProject} focalProject={this.props.focalProject}/>
+		    <Projects 
+		    	projects={this.props.projects} 
+		    	trackFocalProject={this.props.trackFocalProject} 
+		    	focalProject={this.props.focalProject}
+		    	projectClicked={this.props.projectClicked}
+		    	handleProjectClicked={this.props.handleProjectClicked}
+		    />
 		  </div>
 		)
 	}

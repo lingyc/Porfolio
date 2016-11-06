@@ -19,9 +19,9 @@ render((
   				if (location.pathname === 'top' || location.pathname === '/top') {
   					return [0,0];
   				} else if (location.pathname === 'projects' || location.pathname === '/projects') {
-  					return [0,200];
+  					return [0,600];
   				} else if (location.pathname === 'about' || location.pathname === '/about') {
-  					return [0,400];
+  					return [0,1000];
   				}
   			})
   		)
