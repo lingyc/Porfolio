@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Hero from '../containers/Hero';
 import Projects from '../containers/Projects';
+import Techs from '../containers/Techs';
 
 class Home extends Component {
 	constructor(props) {
@@ -10,7 +11,7 @@ class Home extends Component {
 
 	render() {
 	 	return (
-		 	<div>
+		 	<div className='home'>
 		 		<Hero/>
 		    <Projects 
 		    	projects={this.props.projects} 
@@ -19,6 +20,7 @@ class Home extends Component {
 		    	projectClicked={this.props.projectClicked}
 		    	handleProjectClicked={this.props.handleProjectClicked}
 		    />
+		    <Techs/>
 		  </div>
 		)
 	}
