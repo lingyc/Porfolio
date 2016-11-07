@@ -20,7 +20,7 @@ class Home extends Component {
 		    	projectClicked={this.props.projectClicked}
 		    	handleProjectClicked={this.props.handleProjectClicked}
 		    />
-		    <Techs/>
+		    <Techs techData={this.props.techData}/>
 		  </div>
 		)
 	}

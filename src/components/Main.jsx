@@ -7,6 +7,7 @@ import { VelocityComponent } from 'velocity-react';
 import Logo from '../components/Logo';
 import Nav from '../containers/Nav';
 import projectData from '../temp/data';
+import helpers from '../utilities/helpers';
 
 class AppComponent extends Component {
 	constructor(props) {
@@ -16,7 +17,8 @@ class AppComponent extends Component {
 			openingEnd: false,
 			focalProject: null,
 			projectClicked: false,
-			projectData: projectData,
+			projectData: projectData.projectInfo,
+			techData: helpers.poolData(projectData.projectTechDetails)
 		}
 	}
 
@@ -74,7 +76,8 @@ class AppComponent extends Component {
               trackFocalProject: this.trackFocalProject.bind(this),
               focalProject: this.state.focalProject,
               projectClicked: this.state.projectClicked,
-              handleProjectClicked: this.handleProjectClicked.bind(this)
+              handleProjectClicked: this.handleProjectClicked.bind(this),
+              techData: this.state.techData
             })}
         	</div>
 				</VelocityComponent>
