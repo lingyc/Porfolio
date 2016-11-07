@@ -14,10 +14,11 @@ class Techs extends Component {
 		 	<div className="techs">
 		 		<ArcDiagram 
 		 			techData={this.props.techData}
+		 			techLinks={this.props.techLinks}
 		 			width={window.innerWidth * .75}
-		 			height={400}
 		 			margin={250}
 		 			radius={5}
+		 			trackFocalTech={this.props.trackFocalTech}
 	 			/>
 		  </div>
 		)

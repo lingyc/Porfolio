@@ -18,7 +18,8 @@ class AppComponent extends Component {
 			focalProject: null,
 			projectClicked: false,
 			projectData: projectData.projectInfo,
-			techData: helpers.poolData(projectData.projectTechDetails)
+			techData: helpers.poolData(projectData.projectTechDetails),
+			focalTech: null
 		}
 	}
 
@@ -37,6 +38,13 @@ class AppComponent extends Component {
 	trackFocalProject(id) {
 		this.setState({
 			focalProject: id
+		});
+	}
+
+	trackFocalTech(tech) {
+		console.log(tech);
+		this.setState({
+			focalTech: tech
 		});
 	}
 
@@ -64,20 +72,30 @@ class AppComponent extends Component {
 				duration: 250
 			}
 		}
+    
+    let techLinks
+    if (parseInt(this.state.focalProject) >= 0) {
+    	techLinks = projectData.projectTechDetails[parseInt(this.state.focalProject)].techs;
+    } else {
+    	techLinks = [];
+    }
 
     return (
+
       <div className="index">
 				<Logo openingEnd={() => this.openingEnd() } navPanelOpen={this.state.navPanelOpen}/>
 				<VelocityComponent {...bodyAnimation}>
 					<div>
-						<Nav navPanelOpen={this.state.navPanelOpen} toggleNavPanel={() => this.toggleNavPanel()}/>
+						{/*<Nav navPanelOpen={this.state.navPanelOpen} toggleNavPanel={() => this.toggleNavPanel()}/>*/}
 						{React.cloneElement(this.props.children, {
               projects: this.state.projectData,
               trackFocalProject: this.trackFocalProject.bind(this),
               focalProject: this.state.focalProject,
               projectClicked: this.state.projectClicked,
               handleProjectClicked: this.handleProjectClicked.bind(this),
-              techData: this.state.techData
+              techData: this.state.techData,
+              techLinks: techLinks,
+              trackFocalTech: this.trackFocalTech.bind(this)
             })}
         	</div>
 				</VelocityComponent>

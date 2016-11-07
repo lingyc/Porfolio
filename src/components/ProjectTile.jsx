@@ -16,21 +16,21 @@ class ProjectTile extends Component {
 
     if (this.props.projectClicked && this.props.focalProject === project.id) {
       eventHandlers = {
-        onClick: () => { this.props.trackFocalProject(null); this.props.handleProjectClicked(false); }
+        onClick: () => { this.props.trackFocalProject(null); this.props.handleProjectClicked(false); this.setState({hover: false})}
       }
     } else if (this.props.projectClicked && this.props.focalProject !== project.id) {
       eventHandlers = {
-        onClick: () => { this.props.trackFocalProject(project.id); this.props.handleProjectClicked(true); }
+        onClick: () => { this.props.trackFocalProject(project.id); this.props.handleProjectClicked(true); this.setState({hover: false})}
       }
     } else {
       eventHandlers = {
         onMouseEnter: () => { this.props.trackFocalProject(project.id); this.setState({hover: true}) },
         onMouseLeave: () => { this.props.trackFocalProject(null); this.setState({hover: false}) },
-        onClick: () => { this.props.trackFocalProject(project.id); this.props.handleProjectClicked(true); }
+        onClick: () => { this.props.trackFocalProject(project.id); this.props.handleProjectClicked(true); this.setState({hover: false}) }
       }
     }
 
-    if (this.state.hover) {
+    if (this.state.hover || this.props.projectClicked && this.props.focalProject === project.id) {
       animationProps = {
         animation: {
           opacity: 1

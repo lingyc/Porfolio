@@ -89,13 +89,15 @@ table {
   color: white;
 }*/
 
-.home {
+/*nav bar offset*/
+/*.home {
   width: 95%;
   transform: translate(5.2%, 0);
-}
+}*/
+/*nav bar offset*/
 
 .hero {
-  background-image: url("../images/wood-texture.jpg");
+  background-image: url("../images/desktop.jpg");
   background-size: cover;
   height: 600px;
   display: flex;
@@ -213,7 +215,7 @@ table {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 500px;
+  height: 700px;
   background-color: rgba(0, 0, 0, 0.8);
 }
 

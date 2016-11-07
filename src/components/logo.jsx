@@ -37,7 +37,7 @@ class LogoComponent extends Component {
 					...accent,
 			    'stroke-width':3
 				},
-				duration: 200
+				duration: 500
 			}
 		} else if (this.state.openSequenceDone && !this.props.navPanelOpen) {
 				return {
@@ -45,7 +45,7 @@ class LogoComponent extends Component {
 				    ...white,
 				    'stroke-width':2
 					},
-					duration: 200
+					duration: 500
 				}
 		} else if (this.props.navPanelOpen) {
 				return {
@@ -53,7 +53,7 @@ class LogoComponent extends Component {
 				    ...black,
 				    'stroke-width':2
 					},
-					duration: 200
+					duration: 500
 			}
 		} else {
 				return {
@@ -61,7 +61,7 @@ class LogoComponent extends Component {
 				    ...accent,
 				    'stroke-width':2
 					},
-					duration: 200
+					duration: 500
 				}
 		}
 	}
@@ -73,7 +73,7 @@ class LogoComponent extends Component {
 			    ...black,
 			    'stroke-dasharray': 1
 				},
-				duration: 200
+				duration: 500
 			}
 		} else if (this.state.openSequenceDone) {
 			return {
@@ -81,7 +81,7 @@ class LogoComponent extends Component {
 			    ...white,
 			    'stroke-dasharray': 1
 				},
-				duration: 200
+				duration: 500
 			}
 		} else {
 			return {
@@ -93,8 +93,8 @@ class LogoComponent extends Component {
 	}
 
 	renderSVGLogo() {
-		let minorLineDuration = 550;
-		let minorLineDelay = 800;
+		let minorLineDuration = 1000;
+		let minorLineDelay = 1400;
 
 		return (
 			<svg className="SVGLogo" x="0px" y="0px" width="100%" viewBox="0 0 100 100"
@@ -120,7 +120,7 @@ class LogoComponent extends Component {
 				</VelocityComponent>
 
 
-	      	<VelocityComponent animation={{'translateX': 0}} duration={600} delay={300} runOnMount={true}>
+	      	<VelocityComponent animation={{'translateX': 0}} duration={1000} delay={1000} runOnMount={true}>
 	      		<VelocityComponent animation={{'translateX': 21.7}} runOnMount={true}>
 							<g className="logoLayer_2">
 								<VelocityComponent {...(this.animatePropsMinor())}>
@@ -150,9 +150,9 @@ class LogoComponent extends Component {
     return (
     	<Link to="top">
 				<div style={{position: 'relative', 'zIndex':3}}>
-					<VelocityComponent animation={{left: '10%', width: '11%', height: 'auto'}} duration={400} delay={1400} runOnMount={true} complete={() => { this.setState({openSequenceDone: true}); this.props.openingEnd(); }}>
+					<VelocityComponent animation={{left: '6%', width: '8%', height: 'auto'}} duration={500} delay={3000} runOnMount={true} complete={() => { this.setState({openSequenceDone: true}); this.props.openingEnd(); }}>
 		      	<div style={{transform: 'translate(-50%, 0)', position: 'fixed', left: '50%', width: '30%', height: 'auto'}}>
-			      	<VelocityComponent animation={{'stroke-dashoffset': 0}} duration={1000} delay={500} runOnMount={true}>
+			      	<VelocityComponent animation={{'stroke-dashoffset': 0}} duration={2800} delay={500} runOnMount={true}>
 			      			{this.renderSVGLogo()}
 			      	</VelocityComponent>
 		      	</div>

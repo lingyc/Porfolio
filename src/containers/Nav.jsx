@@ -33,7 +33,7 @@ class Nav extends Component {
 		);
 
 		return (
-			<VelocityComponent animation={(this.props.navPanelOpen) ? {width: '20%'} : {width: '5%'}} duration={200}>
+			<VelocityComponent animation={(this.props.navPanelOpen) ? {width: '20%'} : {width: '5%'}} duration={500}>
 				<nav className="nav" style={{width: '5%'}}>
 					<div className="invisiblePanel">
 						{this.renderMenuBtn()}
