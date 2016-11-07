@@ -3,10 +3,10 @@
 const helpers = {
 	poolData: (projectDatas) => {
 		let allDataObj = projectDatas.reduce((prev, curr) => {
-			for (let key in curr.techs) {
-				prev[key] = prev[key] || 0;
-				prev[key]++;
-			}
+			curr.techs.forEach((tech) => {
+				prev[tech.name] = prev[tech.name] || 0;
+				prev[tech.name]++;
+			});
 			return prev;
 		}, {});
 

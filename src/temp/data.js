@@ -40,310 +40,433 @@ const projectInfo = [
 const projectTechDetails = [
 	{
 		id: '0001',
-		techs: {
-			JavaScript: {
-				ReactNative: true,
-				Redux: true,
-				ThreeJS: true,
-				Node: true,
-				Express: true,
-				iOS: true,
-				Babel: true
+		techs: [
+			{
+				name: 'JavaScript',
+				links: [
+					'ReactNative',
+					'Redux',
+					'ThreeJS',
+					'Node',
+					'Express',
+					'iOS',
+					'Babel'
+				]
 			},
-			ReactNative: {
-				JavaScript: true,
-				Redux: true,
-				ThreeJS: true,
-				SVG: true,
-				Node: true,
-				iOS: true
+			{
+				name: 'ReactNative',
+				links: [
+					'JavaScript',
+					'Redux',
+					'ThreeJS',
+					'SVG',
+					'Node',
+					'iOS'
+				]
 			},
-			Redux: {
-				JavaScript: true,
-				ReactNative: true
+			{
+				name: 'Redux',
+				links: [
+					'JavaScript',
+					'ReactNative'
+				]
 			},
-			ThreeJS: {
-				JavaScript: true,
-				ReactNative: true
+			{
+				name: 'ThreeJS',
+				links: [
+					'JavaScript',
+					'ReactNative'
+				]
 			},
-			SVG: {
-				ReactNative: true
+			{
+				name: 'SVG',
+				links: [
+					'ReactNative'
+				]
 			},
-			Node: {
-				JavaScript: true,
-				ReactNative: true,
-				Express: true,
-				Redis: true,
-				'3rdPartyAPI': true
+			{
+				name: 'Node',
+				links: [
+					'JavaScript',
+					'ReactNative',
+					'Express',
+					'Redis',
+					'3rdPartyAPI'
+				]
 			},
-			Express: {
-				JavaScript: true,
-				Node: true
+			{
+				name: 'Express',
+				links: [
+					'JavaScript',
+					'Node'
+				]
 			},
-			Redis: {
-				Node: true
+			{
+				name: 'Redis',
+				links: [
+					'Node'
+				]
 			},
-			iOS: {
-				JavaScript: true,
-				ReactNative: true
+			{
+				name: 'iOS',
+				links: [
+					'JavaScript',
+					'ReactNative'
+				]
 			},
-			'3rdPartyAPI': {
-				Node: true
+			{
+				name:'3rdPartyAPI',
+				links: [
+					'Node'
+				]
 			},
-			Babel: {
-				JavaScript: true
+			{
+				name: 'Babel',
+				links: [
+					'JavaScript'
+				]
 			}
-		}
+		]
 	},
 
 	{
 		id: '0002',
-		techs: {
-			JavaScript: {
-				React: true,
-				Node: true,
-				Express: true,
-				Babel: true,
-				BookShelfJS: true,
-				HTML5: true
+		techs: [
+			{
+				name: 'JavaScript',
+				links: [
+					'React',
+					'Node',
+					'Express',
+					'Babel',
+					'BookShelfJS',
+					'HTML5'
+				]
 			},
-			HTML5: {
-				JavaScript: true,
-				CSS3: true
+			{
+				name: 'HTML5',
+				links: [
+					'JavaScript',
+					'CSS3'
+				]
 			},
-			CSS3: {
-				HTML5: true,
-				Materialize: true
+			{
+				name: 'CSS3',
+				links: [
+					'HTML5',
+					'Materialize'
+				]
 			},
-			React: {
-				JavaScript: true,
-				Node: true,
-				'3rdPartyAPI': true
+			{
+				name: 'React',
+				links: [
+					'JavaScript',
+					'Node',
+					'3rdPartyAPI'
+				]
 			},
-			Node: {
-				JavaScript: true,
-				React: true,
-				Express: true,
-				BookShelfJS: true,
-				mySQL: true,
-				'3rdPartyAPI': true,
-				Heroku: true
+			{
+				name: 'Node',
+				links: [
+					'JavaScript',
+					'React',
+					'Express',
+					'BookShelfJS',
+					'mySQL',
+					'3rdPartyAPI',
+					'Heroku'
+				]
 			},
-			Express: {
-				JavaScript: true,
-				Node: true
+			{
+				name: 'Express',
+				links: [
+					'JavaScript',
+					'Node'
+				]
 			},
-			mySQL: {
-				Node: true,
-				BookShelfJS: true
+			{
+				name: 'mySQL',
+				links: [
+					'Node',
+					'BookShelfJS'
+				]
 			},
-			'3rdPartyAPI': {
-				React: true,
-				Node: true
+			{
+				name: '3rdPartyAPI',
+				links: [
+					'React',
+					'Node'
+				]
 			},
-			BookShelfJS: {
-				Node: true,
-				mySQL: true,
-				JavaScript: true
+			{
+				name: 'BookShelfJS',
+				links: [
+					'Node',
+					'mySQL',
+					'JavaScript'
+				]
 			},
-			Materialize: {
-				CSS3: true
+			{
+				name: 'Materialize',
+				links: [
+					'CSS3'
+				]
 			},
-			Heroku: {
-				Node: true
+			{
+				name: 'Heroku',
+				links: [
+					'Node'
+				]
 			},
-			Babel: {
-				JavaScript: true
+			{
+				name: 'Babel',
+				links: [
+					'JavaScript'
+				]
 			}
-		}
+		]
 	},
 
 	{
 		id: '0003',
-		techs: {
-			JavaScript: {
-				Angular: true,
-				Node: true,
-				Express: true,
-				Mongoose: true,
-				HTML5: true
+		techs: [
+			{
+				name: 'JavaScript',
+				links: [
+					'Angular',
+					'Node',
+					'Express',
+					'Mongoose',
+					'HTML5'
+				]
 			},
-			Node: {
-				JavaScript: true,
-				Express: true,
-				Mongoose: true,
-				MongoDB: true,
-				Angular: true,
-				AWS: true
+			{
+				name: 'Node',
+				links: [
+					'JavaScript',
+					'Express',
+					'Mongoose',
+					'MongoDB',
+					'Angular',
+					'AWS'
+				]
 			},
-			Express: {
-				JavaScript: true,
-				Node: true
+			{
+				name: 'Express',
+				links: [
+					'JavaScript',
+					'Node'
+				]
 			},
-			Angular: {
-				JavaScript: true,
-				Node: true,
-				HTML5: true
+			{
+				name: 'Angular',
+				links: [
+					'JavaScript',
+					'Node',
+					'HTML5'
+				]
 			},
-			HTML5: {
-				JavaScript: true,
-				Angular: true,
-				CSS3: true
+			{
+				name: 'HTML5',
+				links: [
+					'JavaScript',
+					'Angular',
+					'CSS3'
+				]
 			},
-			CSS3: {
-				HTML5: true,
-				Bootstrap: true
+			{
+				name: 'CSS3',
+				links: [
+					'HTML5',
+					'Bootstrap'
+				]
 			},
-			Bootstrap: {
-				CSS3: true
+			{
+				name: 'Bootstrap',
+				links: [
+					'CSS3'
+				]
 			},
-			AWS: {
-				Node: true
+			{
+				name: 'AWS',
+				links: [
+					'Node'
+				]
 			},
-			MongoDB: {
-				Node: true,
-				Mongoose: true
+			{
+				name: 'MongoDB',
+				links: [
+					'Node',
+					'Mongoose'
+				]
 			},
-			Mongoose: {
-				Node: true,
-				MongoDB: true,
-				JavaScript: true
+			{
+				name: 'Mongoose',
+				links: [
+					'Node',
+					'MongoDB',
+					'JavaScript'
+				]
 			}
-		}
+		]
 	},
 
 	{
 		id: '0004',
-		techs: {
-			JavaScript: {
-				React: true,
-				Redux: true,
-				MapBox: true,
-				Wedpack: true,
-				Babel: true,
-				Node: true,
-				Express: true,
-				HTML5: true
+		techs: [
+			{
+				name: 'JavaScript',
+				links: [
+					'React',
+					'Redux',
+					'MapBox',
+					'Wedpack',
+					'Babel',
+					'Node',
+					'Express',
+					'HTML5'
+				]
 			},
-			React: {
-				JavaScript: true,
-				Redux: true,
-				MapBox: true,
-				Node: true
+			{
+				name: 'React',
+				links: [
+					'JavaScript',
+					'Redux',
+					'MapBox',
+					'Node'
+				]
 			},
-			Redux: {
-				JavaScript: true,
-				React: true
+			{
+				name: 'Redux',
+				links: [
+					'JavaScript',
+					'React'
+				]
 			},
-			MapBox: {
-				JavaScript: true,
-				React: true
+			{
+				name: 'MapBox',
+				links: [
+					'JavaScript',
+					'React'
+				]
 			},
-			PostgresSQL: {
-				Node: true
+			{
+				name: 'PostgresSQL',
+				links: [
+					'Node'
+				]
 			},
-			Wedpack: {
-				JavaScript: true,
-				Babel: true
+			{
+				name: 'Wedpack',
+				links: [
+					'JavaScript',
+					'Babel'
+				]
 			},
-			Babel: {
-				JavaScript: true,
-				Wedpack: true
+			{
+				name: 'Babel',
+				links: [
+					'JavaScript',
+					'Wedpack'
+				]
 			},
-			Node: {
-				JavaScript: true,
-				React: true,
-				PostgresSQL: true,
-				Express: true
+			{
+				name: 'Node',
+				links: [
+					'JavaScript',
+					'React',
+					'PostgresSQL',
+					'Express'
+				]
 			},
-			Express: {
-				JavaScript: true,
-				Node: true
+			{
+				name: 'Express',
+				links: [
+					'JavaScript',
+					'Node'
+				]
 			},
-			Bootstrap: {
-				CSS3: true
+			{
+				name: 'Bootstrap',
+				links: [
+					'CSS3'
+				]
 			},
-			HTML5: {
-				JavaScript: true,
-				CSS3: true
+			{
+				name: 'HTML5',
+				links: [
+					'JavaScript',
+					'CSS3'
+				]
 			},
-			CSS3: {
-				Bootstrap: true,
-				HTML5: true
+			{
+				name: 'CSS3',
+				links: [
+					'Bootstrap',
+					'HTML5'
+				]
 			}
-		}
+		]
 	},
 
 	{
 		id: '0005',
-		techs: {
-			Rhino3D: {
-				AutoCAD: true,
-				'3dsMAX': true,
-				SketchUP: true
+		techs: [
+			{
+				name: 'Rhino3D',
+				links: [
+					'AutoCAD',
+					'3dsMAX',
+					'SketchUP'
+				]
 			},
-			Illustrator: {
-				InDesign: true
+			{
+				name: 'Illustrator',
+				links: [
+					'InDesign'
+				]
 			},
-			Photoshop: {
-				InDesign: true,
-				VrayRenderer: true
+			{
+				name: 'Photoshop',
+				links: [
+					'InDesign',
+					'VrayRenderer'
+				]
 			},
-			InDesign: {
-				Illustrator: true,
-				Photoshop: true
+			{
+				name: 'InDesign',
+				links: [
+					'Illustrator',
+					'Photoshop'
+				]
 			},
-			AutoCAD: {
-				Rhino3D: true
+			{
+				name: 'AutoCAD',
+				links: [
+					'Rhino3D'
+				]
 			},
-			VrayRenderer: {
-				Photoshop: true,
-				'3dsMAX': true
+			{
+				name: 'VrayRenderer',
+				links: [
+					'Photoshop',
+					'3dsMAX'
+				]
 			},
-			'3dsMAX': {
-				Rhino3D: true,
-				VrayRenderer: true
+			{
+				name: '3dsMAX',
+				links: [
+					'Rhino3D',
+					'VrayRenderer'
+				]
 			},
-			SketchUP: {
-				Rhino3D: true
+			{
+				name: 'SketchUP',
+				links: [
+					'Rhino3D'
+				]
 			}
-		}
-	},
-
-	{
-		id: '0006',
-		techs: {
-			Rhino3D: {
-				AutoCAD: true,
-				'3dsMAX': true,
-				SketchUP: true
-			},
-			Illustrator: {
-				InDesign: true
-			},
-			Photoshop: {
-				InDesign: true,
-				VrayRenderer: true
-			},
-			InDesign: {
-				Illustrator: true,
-				Photoshop: true
-			},
-			AutoCAD: {
-				Rhino3D: true
-			},
-			VrayRenderer: {
-				Photoshop: true,
-				'3dsMAX': true
-			},
-			'3dsMAX': {
-				Rhino3D: true,
-				VrayRenderer: true
-			},
-			SketchUP: {
-				Rhino3D: true
-			}
-		}
+		]
 	}
 ];
 
