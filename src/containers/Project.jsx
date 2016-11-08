@@ -39,7 +39,7 @@ class Project extends Component {
 		const projectId = parseInt(this.props.params.projectId);
 		const projectInfo = this.props.projectInfo[projectId];
 		const projectTechDetails = this.props.projectTechDetails[projectId];
-		console.log(this.props.techLinks);
+		console.log(this.state.currentImg);
 
 		return (
 			<div className="projectPage">
@@ -53,7 +53,7 @@ class Project extends Component {
 
 						<Grid centered={true}>
 					    <Grid.Column className="projectPage-hero-container" width={10}>
-								<Image className="projectPage-hero" bordered={true} src={projectInfo.thumbnail}/>
+								<Image className="projectPage-hero" bordered={true} src={projectInfo.img[this.state.currentImg]}/>
 					    </Grid.Column>
 
 					    <Grid.Column width={6} textAlign="left">
