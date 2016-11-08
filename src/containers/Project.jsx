@@ -36,9 +36,10 @@ class Project extends Component {
 	render() {
 		//for future, do ajax request to grab detail project data
 		// const projectId = this.props.params.projectId;
-		const projectId = 0;
+		const projectId = parseInt(this.props.params.projectId);
 		const projectInfo = this.props.projectInfo[projectId];
 		const projectTechDetails = this.props.projectTechDetails[projectId];
+		console.log(this.props.techLinks);
 
 		return (
 			<div className="projectPage">
@@ -78,7 +79,7 @@ class Project extends Component {
 				<div className='stacks'>
 			 		<ArcDiagram 
 			 			techData={this.props.techData}
-			 			techLinks={(!this.props.techLinks.length) ? this.props.projectTechDetails[this.state.projectId].techs : this.props.techLinks}
+			 			techLinks={(this.props.techLinks.length !== 0) ? this.props.techLinks : projectTechDetails.techs}
 			 			width={window.innerWidth * .75}
 			 			margin={250}
 			 			radius={5}

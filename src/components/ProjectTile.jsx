@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import { VelocityComponent } from 'velocity-react';
 import { Button, Icon } from 'semantic-ui-react';
 
@@ -54,12 +55,14 @@ class ProjectTile extends Component {
             <div className="textGroupInner">
               <h3 className="projectName">{project.name}</h3>
         			<h3 className="projectDescription">{project.description}</h3>
-                <Button animated>
-                  <Button.Content visible>Read More</Button.Content>
-                  <Button.Content hidden>
-                    <Icon name='right arrow' />
-                  </Button.Content>
-                </Button>
+                <Link to={`/project/${project.id}`}>
+                  <Button animated>
+                    <Button.Content visible>Read More</Button.Content>
+                    <Button.Content hidden>
+                      <Icon name='right arrow' />
+                    </Button.Content>
+                  </Button>
+                </Link>
             </div>
     		  </div>
         </VelocityComponent>

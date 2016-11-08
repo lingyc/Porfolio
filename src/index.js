@@ -17,20 +17,22 @@ render((
   	render={
   		applyRouterMiddleware(useScroll(
   			(prevRouterProps, {location}) => {
-  				if (location.pathname === 'top' || location.pathname === '/top') {
+  				if (location.pathname === '/top' || location.pathname === '/top') {
   					return [0,0];
-  				} else if (location.pathname === 'projects' || location.pathname === '/projects') {
+  				} else if (location.pathname === '/projects' || location.pathname === '/projects') {
   					return [0,600];
-  				} else if (location.pathname === 'about' || location.pathname === '/about') {
+  				} else if (location.pathname === '/about' || location.pathname === '/about') {
   					return [0,1000];
-  				}
+  				} else if (location.pathname === '/project' || location.pathname === '/project') {
+            return [0,0];
+          }
   			})
   		)
   	}>
     <Route path="/" component={App}>
-      <IndexRoute component={Project}/>
+      <IndexRoute component={Home}/>
+      <Route path="project/:projectId" name="project" component={Project}/>
       <Route path="*" component={Home}/>
-        <Route path="/project/:projectId" component={Project}/>
     </Route>
   </Router>
 ), document.getElementById('app'))

@@ -2,6 +2,7 @@ require('normalize.css/normalize.css');
 require('styles/App.css');
 
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import { VelocityComponent } from 'velocity-react';
 
 import Logo from '../components/Logo';
@@ -88,7 +89,9 @@ class AppComponent extends Component {
     return (
 
       <div className="index">
-				<Logo openingEnd={() => this.openingEnd() } navPanelOpen={this.state.navPanelOpen} currentView={this.state.currentView}/>
+      	<Link to="/top">
+					<Logo openingEnd={() => this.openingEnd() } toggleNavPanel={this.toggleNavPanel.bind(this)} navPanelOpen={this.state.navPanelOpen} currentView={this.state.currentView}/>
+		    </Link>
 				<VelocityComponent {...bodyAnimation}>
 					<div>
 						{/*<Nav navPanelOpen={this.state.navPanelOpen} toggleNavPanel={() => this.toggleNavPanel()}/>*/}

@@ -15,31 +15,61 @@ const projectInfo = [
 		id: '0001',
 		name: 'ReelPals',
 		description: 'Web Application',
-		thumbnail: 'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655'
+		thumbnail: 'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655',
+		thumbnails: [
+			'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655',
+			'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655',
+			'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655'
+		],
+		detailDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\nCurabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. '
 	},
 	{
 		id: '0002',
 		name: 'FoodBuddy',
 		description: 'Web Application',
-		thumbnail: 'http://imagecache5d.allposters.com/watermarker/56-5698-2SSUG00Z.jpg'
+		thumbnail: 'http://imagecache5d.allposters.com/watermarker/56-5698-2SSUG00Z.jpg',
+		thumbnails: [
+			'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655',
+			'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655',
+			'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655'
+		],
+		detailDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\nCurabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. '
 	},
 	{
 		id: '0003',
 		name: 'WishSpots',
 		description: 'Web Application',
-		thumbnail: 'http://imagecache5d.allposters.com/watermarker/17-1723-KK53D00Z.jpg'
+		thumbnail: 'http://imagecache5d.allposters.com/watermarker/17-1723-KK53D00Z.jpg',
+		thumbnails: [
+			'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655',
+			'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655',
+			'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655'
+		],
+		detailDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\nCurabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. '
 	},
 	{
 		id: '0004',
 		name: 'Huatai Design Competition',
 		description: 'Architectural Design',
-		thumbnail: 'http://imagecache5d.allposters.com/watermarker/56-5662-2HFUG00Z.jpg'
+		thumbnail: 'http://imagecache5d.allposters.com/watermarker/56-5662-2HFUG00Z.jpg',
+		thumbnails: [
+			'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655',
+			'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655',
+			'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655'
+		],
+		detailDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\nCurabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. '
 	},
 	{
 		id: '0005',
 		name: 'South Water Residence',
 		description: 'Architectural Design',
-		thumbnail: 'http://imagecache5d.allposters.com/watermarker/15-1555-PN9DD00Z.jpg'
+		thumbnail: 'http://imagecache5d.allposters.com/watermarker/15-1555-PN9DD00Z.jpg',
+		thumbnails: [
+			'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655',
+			'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655',
+			'http://imagecache5d.allposters.com/watermarker/21-2126-GJJED00Z.jpg?ch=916&cw=655'
+		],
+		detailDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\nCurabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. '
 	}
 ];
 
