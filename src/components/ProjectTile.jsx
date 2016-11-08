@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { VelocityComponent } from 'velocity-react';
+import { Button, Icon } from 'semantic-ui-react';
 
 class ProjectTile extends Component {
 	constructor(props) {
@@ -53,7 +54,12 @@ class ProjectTile extends Component {
             <div className="textGroupInner">
               <h3 className="projectName">{project.name}</h3>
         			<h3 className="projectDescription">{project.description}</h3>
-              <button>read more</button>
+                <Button animated>
+                  <Button.Content visible>Read More</Button.Content>
+                  <Button.Content hidden>
+                    <Icon name='right arrow' />
+                  </Button.Content>
+                </Button>
             </div>
     		  </div>
         </VelocityComponent>

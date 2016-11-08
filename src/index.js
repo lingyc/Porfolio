@@ -7,6 +7,7 @@ import { useScroll } from 'react-router-scroll';
 
 import App from './components/Main';
 import Home from './containers/Home';
+import Project from './containers/Project';
 
 // Render the main component into the dom
 // ReactDOM.render(<App />, document.getElementById('app'));
@@ -27,8 +28,9 @@ render((
   		)
   	}>
     <Route path="/" component={App}>
-      <IndexRoute component={Home}/>
+      <IndexRoute component={Project}/>
       <Route path="*" component={Home}/>
+        <Route path="/project/:projectId" component={Project}/>
     </Route>
   </Router>
 ), document.getElementById('app'))

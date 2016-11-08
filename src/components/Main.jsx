@@ -17,9 +17,11 @@ class AppComponent extends Component {
 			openingEnd: false,
 			focalProject: null,
 			projectClicked: false,
-			projectData: projectData.projectInfo,
+			projectInfo: projectData.projectInfo,
+			projectTechDetails: projectData.projectTechDetails,
 			techData: helpers.poolData(projectData.projectTechDetails),
-			focalTech: null
+			focalTech: null,
+			currentView: 'Home'
 		}
 	}
 
@@ -54,6 +56,9 @@ class AppComponent extends Component {
 		});
 	}
 
+	notifyViewChange(view) {
+		this.setState({currentView: view});
+	}
 
   render() {
 		let bodyAnimation;
@@ -62,14 +67,14 @@ class AppComponent extends Component {
 				animation: {
 			    opacity: 1
 				},
-				duration: 250
+				duration: 700
 			}
 		} else {
 			bodyAnimation = {
 				animation: {
 			    opacity: 0
 				},
-				duration: 250
+				duration: 700
 			}
 		}
     
@@ -83,19 +88,21 @@ class AppComponent extends Component {
     return (
 
       <div className="index">
-				<Logo openingEnd={() => this.openingEnd() } navPanelOpen={this.state.navPanelOpen}/>
+				<Logo openingEnd={() => this.openingEnd() } navPanelOpen={this.state.navPanelOpen} currentView={this.state.currentView}/>
 				<VelocityComponent {...bodyAnimation}>
 					<div>
 						{/*<Nav navPanelOpen={this.state.navPanelOpen} toggleNavPanel={() => this.toggleNavPanel()}/>*/}
 						{React.cloneElement(this.props.children, {
-              projects: this.state.projectData,
+              projectInfo: this.state.projectInfo,
+              projectTechDetails: this.state.projectTechDetails,
               trackFocalProject: this.trackFocalProject.bind(this),
               focalProject: this.state.focalProject,
               projectClicked: this.state.projectClicked,
               handleProjectClicked: this.handleProjectClicked.bind(this),
               techData: this.state.techData,
               techLinks: techLinks,
-              trackFocalTech: this.trackFocalTech.bind(this)
+              trackFocalTech: this.trackFocalTech.bind(this),
+              notifyViewChange: this.notifyViewChange.bind(this)
             })}
         	</div>
 				</VelocityComponent>

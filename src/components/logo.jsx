@@ -39,7 +39,7 @@ class LogoComponent extends Component {
 				},
 				duration: 500
 			}
-		} else if (this.state.openSequenceDone && !this.props.navPanelOpen) {
+		} else if (this.state.openSequenceDone && !this.props.navPanelOpen && this.props.currentView !== 'Project') {
 				return {
 					animation: {
 				    ...white,
@@ -47,7 +47,7 @@ class LogoComponent extends Component {
 					},
 					duration: 500
 				}
-		} else if (this.props.navPanelOpen) {
+		} else if (this.state.openSequenceDone && (this.props.navPanelOpen || this.props.currentView === 'Project')) {
 				return {
 					animation: {
 				    ...black,
@@ -75,10 +75,18 @@ class LogoComponent extends Component {
 				},
 				duration: 500
 			}
-		} else if (this.state.openSequenceDone) {
+		} else if (this.state.openSequenceDone && this.props.currentView !== 'Project') {
 			return {
 				animation: {
 			    ...white,
+			    'stroke-dasharray': 1
+				},
+				duration: 500
+			}
+		} else if (this.state.openSequenceDone && this.props.currentView === 'Project') {
+			return {
+				animation: {
+			    ...black,
 			    'stroke-dasharray': 1
 				},
 				duration: 500
@@ -88,6 +96,26 @@ class LogoComponent extends Component {
 				animation: {
 			    ...black
 				}
+			}
+		}
+	}
+
+	animatePropsHover() {
+		if (this.state.hover && this.state.openSequenceDone) {
+			return {
+				animation: {left: '6%', width: '8%', top: '1%', height: 'auto'},
+				duration: 300
+			}
+		} else if (!this.state.openSequenceDone) {
+			return {
+				animation: {left: '4%', width: '5%', top: '1%', height: 'auto'},
+				duration: 500,
+				delay: 3000
+			}
+		} else {
+			return {	
+				animation: {left: '4%', width: '5%', top: '1%', height: 'auto'},
+				duration: 300
 			}
 		}
 	}
@@ -150,8 +178,8 @@ class LogoComponent extends Component {
     return (
     	<Link to="top">
 				<div style={{position: 'relative', 'zIndex':3}}>
-					<VelocityComponent animation={{left: '6%', width: '8%', height: 'auto'}} duration={500} delay={3000} runOnMount={true} complete={() => { this.setState({openSequenceDone: true}); this.props.openingEnd(); }}>
-		      	<div style={{transform: 'translate(-50%, 0)', position: 'fixed', left: '50%', width: '30%', height: 'auto'}}>
+					<VelocityComponent {...this.animatePropsHover()} runOnMount={true} complete={() => { this.setState({openSequenceDone: true}); this.props.openingEnd(); }}>
+		      	<div style={{transform: 'translate(-50%, -50%)', top: '50%', position: 'fixed', left: '50%', width: '30%', height: 'auto'}}>
 			      	<VelocityComponent animation={{'stroke-dashoffset': 0}} duration={2800} delay={500} runOnMount={true}>
 			      			{this.renderSVGLogo()}
 			      	</VelocityComponent>

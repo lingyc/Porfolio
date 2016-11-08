@@ -130,7 +130,7 @@ class ArcDiagram extends Component {
 		let scaledNodes = this.linearLayout(this.props.techData);
 	 	return (
 			<svg className="diagram">
-				<svg className="plot" style={{fill: 'white'}}>
+				<svg className="plot" style={{fill: this.props.color || 'white'}}>
 					{this.renderNodes(scaledNodes.dataArray, this.state.radius)}
 					<VelocityComponent animation={animationProps} duration={500}>
 						{this.renderLinks(this.props.techLinks, scaledNodes.dataHash)}
