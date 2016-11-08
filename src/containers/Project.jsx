@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { VelocityComponent } from 'velocity-react';
-import { Grid, Image, Container, Divider } from 'semantic-ui-react'
+import { Grid, Image, Container, Divider, Icon } from 'semantic-ui-react'
 
 import ArcDiagram from '../components/ArcDiagram';
 import ProjectsBar from '../containers/ProjectsBar';
@@ -10,12 +10,27 @@ class Project extends Component {
 		super(props);
 		this.state = {
 			currentImg: 0,
-			projectId: 0
+			projectId: 0,
+			showOtherProjects: false
 		}
 	}
 
 	componentDidMount() {
 		this.props.notifyViewChange('Project');
+	}
+
+	renderMoreProjects() {
+		if (this.state.showOtherProjects) {
+			return (
+				<ProjectsBar
+		    	projectInfo={this.props.projectInfo} 
+		    	trackFocalProject={this.props.trackFocalProject} 
+		    	focalProject={this.props.focalProject}
+		    	projectClicked={this.props.projectClicked}
+		    	handleProjectClicked={this.props.handleProjectClicked}
+			  />
+			)
+		}
 	}
 
 	render() {
@@ -55,17 +70,15 @@ class Project extends Component {
 					</Grid.Row>
 
 				</Grid>
-				<ProjectsBar
-		    	projectInfo={this.props.projectInfo} 
-		    	trackFocalProject={this.props.trackFocalProject} 
-		    	focalProject={this.props.focalProject}
-		    	projectClicked={this.props.projectClicked}
-		    	handleProjectClicked={this.props.handleProjectClicked}
-		    	/>
+					<Divider horizontal>
+						<Icon name={(this.state.showOtherProjects) ? 'caret up' : 'caret down'} onClick={ () => this.setState({showOtherProjects: !this.state.showOtherProjects}) }/>
+					</Divider>
+					{this.renderMoreProjects()}
+					<h4>THE TECH STACK</h4>
 				<div className='stacks'>
 			 		<ArcDiagram 
 			 			techData={this.props.techData}
-			 			techLinks={this.props.projectTechDetails[this.state.projectId].techs}
+			 			techLinks={(!this.props.techLinks.length) ? this.props.projectTechDetails[this.state.projectId].techs : this.props.techLinks}
 			 			width={window.innerWidth * .75}
 			 			margin={250}
 			 			radius={5}
