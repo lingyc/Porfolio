@@ -146,7 +146,7 @@ class LogoComponent extends Component {
 				</VelocityComponent>
 
 
-	      	<VelocityComponent animation={{'translateX': 0}} duration={1000} delay={1000} runOnMount={true}>
+	      	<VelocityComponent animation={{'translateX': 0}} duration={1150} delay={800} runOnMount={true}>
 	      		<VelocityComponent animation={{'translateX': 21.7}} runOnMount={true}>
 							<g className="logoLayer_2">
 								<VelocityComponent {...(this.animatePropsMinor())}>

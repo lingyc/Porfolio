@@ -12,9 +12,9 @@
     "release:major": "npm version major && npm publish && git push --follow-tags",
     "release:minor": "npm version minor && npm publish && git push --follow-tags",
     "release:patch": "npm version patch && npm publish && git push --follow-tags",
-    "serve": "node server.js --env=dev",
-    "serve:dist": "node server.js --env=dist",
-    "start": "node server.js --env=dev",
+    "serve:dev": "node dev-server.js --env=dev",
+    "serve:dist": "node dev-server.js --env=dist",
+    "start": "npm run dist && nodemon server.js",
     "test": "karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false"
   },
@@ -63,6 +63,7 @@
   "dependencies": {
     "core-js": "^2.0.0",
     "d3": "^4.3.0",
+    "express": "^4.14.0",
     "lodash": "^4.16.6",
     "normalize.css": "^4.0.0",
     "react": "^15.0.0",
