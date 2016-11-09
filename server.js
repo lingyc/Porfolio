@@ -9,8 +9,11 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || '8000';
 
-console.log(__dirname + '/dist');
 app.use(express.static(__dirname + '/dist'));
+
+app.get('/',function(req, res){
+	console.log('serving');
+});
 
 app.listen(port, function() {
 	console.log('Listening on port ', port);
