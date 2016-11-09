@@ -7,7 +7,7 @@ class ProjectTile extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			hover: false,
+			hover: false
 		}
 	}
 

@@ -2,7 +2,6 @@ require('normalize.css/normalize.css');
 require('styles/App.css');
 
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import { VelocityComponent } from 'velocity-react';
 
 import Logo from '../components/Logo';
@@ -45,7 +44,6 @@ class AppComponent extends Component {
 	}
 
 	trackFocalTech(tech) {
-		console.log(tech);
 		this.setState({
 			focalTech: tech
 		});

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { VelocityComponent } from 'velocity-react';
-import { Menu } from 'semantic-ui-react'
 
 class Nav extends Component {
 	constructor(props) {

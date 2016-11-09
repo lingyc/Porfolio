@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ProjectTile from '../components/ProjectTile';
 
 const Projects = (props) => {

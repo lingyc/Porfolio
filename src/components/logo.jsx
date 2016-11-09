@@ -111,7 +111,7 @@ class LogoComponent extends Component {
 				delay: 3000
 			}
 		} else {
-			return {	
+			return {
 				animation: {left: '4%', width: '5%', top: '0%', height: 'auto'},
 				duration: 300
 			}

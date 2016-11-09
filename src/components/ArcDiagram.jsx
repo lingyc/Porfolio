@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { scaleLinear } from 'd3-scale';
-const d3 = require("d3");
+const d3 = require('d3');
 import { VelocityComponent } from 'velocity-react';
 
 class ArcDiagram extends Component {
@@ -65,9 +64,6 @@ class ArcDiagram extends Component {
 	}
 
 	renderLinks(techs, nodesHash) {
-    let radians = scaleLinear()
-    .range([Math.PI / 2, 3 * Math.PI / 2]);
-
     //this can be refactor with a better graph data structure for the project data
     //right now the edges are duplicated
     let rendered = {};
@@ -91,7 +87,6 @@ class ArcDiagram extends Component {
 			    		// get x distance between source and target
 			    		xdist = Math.abs(nodesHash[source] - nodesHash[target]);
 			    		// arc.radius(xdist / 2);
-			    		let points = d3.range(0, Math.ceil(xdist / 3));
 			    		//use an object to remember if the edge has already been rendered
 			    		rendered[source] = rendered[source] || {};
 			    		rendered[source][target] = true;

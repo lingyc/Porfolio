@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { VelocityComponent } from 'velocity-react';
-import { Grid, Image, Container, Divider, Icon } from 'semantic-ui-react'
+import { Grid, Image, Divider, Icon } from 'semantic-ui-react'
 
 import ArcDiagram from '../components/ArcDiagram';
 import ProjectsBar from '../containers/ProjectsBar';
@@ -23,8 +22,8 @@ class Project extends Component {
 		if (this.state.showOtherProjects) {
 			return (
 				<ProjectsBar
-		    	projectInfo={this.props.projectInfo} 
-		    	trackFocalProject={this.props.trackFocalProject} 
+		    	projectInfo={this.props.projectInfo}
+		    	trackFocalProject={this.props.trackFocalProject}
 		    	focalProject={this.props.focalProject}
 		    	projectClicked={this.props.projectClicked}
 		    	handleProjectClicked={this.props.handleProjectClicked}
@@ -39,7 +38,6 @@ class Project extends Component {
 		const projectId = parseInt(this.props.params.projectId);
 		const projectInfo = this.props.projectInfo[projectId];
 		const projectTechDetails = this.props.projectTechDetails[projectId];
-		console.log(this.state.currentImg);
 
 		return (
 			<div className="projectPage">
@@ -77,7 +75,7 @@ class Project extends Component {
 					{this.renderMoreProjects()}
 					<h4>THE TECH STACK</h4>
 				<div className='stacks'>
-			 		<ArcDiagram 
+			 		<ArcDiagram
 			 			techData={this.props.techData}
 			 			techLinks={(this.props.techLinks.length !== 0) ? this.props.techLinks : projectTechDetails.techs}
 			 			width={window.innerWidth * .75}

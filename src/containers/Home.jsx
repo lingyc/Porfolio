@@ -17,15 +17,15 @@ class Home extends Component {
 	 	return (
 		 	<div className='home'>
 		 		<Hero/>
-		    <ProjectsHome 
-		    	projectInfo={this.props.projectInfo} 
-		    	trackFocalProject={this.props.trackFocalProject} 
+		    <ProjectsHome
+		    	projectInfo={this.props.projectInfo}
+		    	trackFocalProject={this.props.trackFocalProject}
 		    	focalProject={this.props.focalProject}
 		    	projectClicked={this.props.projectClicked}
 		    	handleProjectClicked={this.props.handleProjectClicked}
 		    />
-		    <Techs 
-		    	techData={this.props.techData} 
+		    <Techs
+		    	techData={this.props.techData}
 		    	techLinks={this.props.techLinks}
 		    	trackFocalTech={this.props.trackFocalTech}
 		    />
