@@ -51,7 +51,7 @@ class Project extends Component {
 
 						<Grid centered={true}>
 					    <Grid.Column className="projectPage-hero-container" width={10}>
-								<Image className="projectPage-hero" bordered={true} src={projectInfo.img[this.state.currentImg]}/>
+								<Image className="projectPage-hero" bordered={true} src={projectInfo.img[this.state.currentImg]} shape='rounded'/>
 					    </Grid.Column>
 
 					    <Grid.Column width={6} textAlign="left">
@@ -62,6 +62,7 @@ class Project extends Component {
 										)
 									})}
 								</Image.Group>
+								<a className='divider-link' href={projectInfo.link}>{projectInfo.link}</a>
 								{projectInfo.detailDescription.split('\n').map((paragraph, index) => <p key={index}>{paragraph}</p>)}
 							</Grid.Column>
 						</Grid>
