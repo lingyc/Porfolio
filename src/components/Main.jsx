@@ -89,12 +89,10 @@ class AppComponent extends Component {
     return (
 
       <div className="index">
-      	<Link to="/top">
-					<Logo openingEnd={() => this.openingEnd() } toggleNavPanel={this.toggleNavPanel.bind(this)} navPanelOpen={this.state.navPanelOpen} currentView={this.state.currentView}/>
-		    </Link>
+				<Logo openingEnd={() => this.openingEnd() } toggleNavPanel={this.toggleNavPanel.bind(this)} navPanelOpen={this.state.navPanelOpen} currentView={this.state.currentView}/>
 				<VelocityComponent {...bodyAnimation}>
 					<div>
-						{/*<Nav navPanelOpen={this.state.navPanelOpen} toggleNavPanel={() => this.toggleNavPanel()}/>*/}
+						{<Nav navPanelOpen={this.state.navPanelOpen} toggleNavPanel={() => this.toggleNavPanel()}/>}
 						{React.cloneElement(this.props.children, {
               projectInfo: this.state.projectInfo,
               projectTechDetails: this.state.projectTechDetails,

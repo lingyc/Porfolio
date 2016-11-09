@@ -22,7 +22,7 @@ class ArcDiagram extends Component {
 
   updateDimensions() {
   	this.setState({
-  		width: window.innerWidth * .75
+  		width: window.innerWidth * .8
   	})
   }
 
@@ -30,7 +30,7 @@ class ArcDiagram extends Component {
     // used to scale node index to x position
     let xscale = scaleLinear()
         .domain([0, nodes.length - 1])
-        .range([this.state.radius, this.state.width - this.state.radius - this.state.pad / 2]);
+        .range([this.state.radius, this.state.width - this.state.radius - this.state.pad / 2 - this.state.width * .02]);
 
     // calculate pixel location for each node
     //dataHash created for fast lookup
