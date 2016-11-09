@@ -14,7 +14,7 @@
     "release:patch": "npm version patch && npm publish && git push --follow-tags",
     "serve:dev": "node dev-server.js --env=dev",
     "serve:dist": "node dev-server.js --env=dist",
-    "start": "npm run dist && nodemon server.js",
+    "start": "nodemon server.js",
     "test": "karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false"
   },
@@ -65,6 +65,7 @@
     "d3": "^4.3.0",
     "express": "^4.14.0",
     "lodash": "^4.16.6",
+    "nodemon": "^1.11.0",
     "normalize.css": "^4.0.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
