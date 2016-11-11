@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Icon } from 'semantic-ui-react'
 
 class Hero extends Component {
 	render() {
@@ -6,7 +7,28 @@ class Hero extends Component {
 			<div className="hero">
 				<div className="mainMsg">
 					<h3>LING CHEN</h3>
-					<h1>Web Developer<br/>Porfolio</h1>
+					<h1>Web Developer</h1>
+
+					<a href='https://github.com/lingyc' target="_blank">
+						<Icon name='github alternate' size='big'/>
+					</a>
+
+					<a href='https://www.linkedin.com/in/ling-yu-chen-1b967312' target="_blank">
+						<Icon name='linkedin' size='big'/>
+					</a>
+
+					<a href='https://angel.co/ling-yu-chen' target="_blank">
+						<Icon name='angellist' size='big'/>
+					</a>
+
+					<a href='mailto:lingchen215@gmail.com' target="_blank">
+						<Icon name='mail' size='big'/>
+					</a>
+
+					<a href="tel:+1-415-627-7886">
+						<Icon name='mobile' size='big'/>
+					</a>
+
 				</div>
 			</div>
 		);
