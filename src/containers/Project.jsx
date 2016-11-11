@@ -71,7 +71,7 @@ class Project extends Component {
 
 				</Grid>
 					<Divider horizontal>
-						<Icon name={(this.state.showOtherProjects) ? 'caret up' : 'caret down'} onClick={ () => this.setState({showOtherProjects: !this.state.showOtherProjects}) }/>
+						<Icon className="showMore" name={(this.state.showOtherProjects) ? 'caret up' : 'caret down'} onClick={ () => this.setState({showOtherProjects: !this.state.showOtherProjects}) }/>
 					</Divider>
 					{this.renderMoreProjects()}
 					<h4>THE TECH STACK</h4>

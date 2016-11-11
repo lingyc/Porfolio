@@ -21,7 +21,31 @@ class AppComponent extends Component {
 			projectTechDetails: projectData.projectTechDetails,
 			techData: helpers.poolData(projectData.projectTechDetails),
 			focalTech: null,
-			currentView: 'Home'
+			currentView: 'Home',
+			scrollPosition: 0
+		}
+	}
+
+	componentDidMount() {
+		window.addEventListener('scroll', this.handleScroll.bind(this));
+	}
+
+	componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll.bind(this));
+	}
+
+	handleScroll(event) {
+		let scrollTop = event.srcElement.body.scrollTop;
+		this.setState({scrollPosition: scrollTop});
+
+		if (scrollTop >= 300) {
+			this.setState({
+				navPanelOpen: true
+			});
+		} else if (scrollTop <= 50) {
+			this.setState({
+				navPanelOpen: false
+			});
 		}
 	}
 
@@ -90,7 +114,7 @@ class AppComponent extends Component {
 				<Logo openingEnd={() => this.openingEnd() } toggleNavPanel={this.toggleNavPanel.bind(this)} navPanelOpen={this.state.navPanelOpen} currentView={this.state.currentView}/>
 				<VelocityComponent {...bodyAnimation}>
 					<div>
-						{<Nav navPanelOpen={this.state.navPanelOpen} toggleNavPanel={() => this.toggleNavPanel()}/>}
+						{<Nav navPanelOpen={this.state.navPanelOpen}/>}
 						{React.cloneElement(this.props.children, {
               projectInfo: this.state.projectInfo,
               projectTechDetails: this.state.projectTechDetails,
@@ -101,7 +125,8 @@ class AppComponent extends Component {
               techData: this.state.techData,
               techLinks: techLinks,
               trackFocalTech: this.trackFocalTech.bind(this),
-              notifyViewChange: this.notifyViewChange.bind(this)
+              notifyViewChange: this.notifyViewChange.bind(this),
+              scrollPosition: this.state.scrollPosition
             })}
         	</div>
 				</VelocityComponent>
