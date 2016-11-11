@@ -11,7 +11,8 @@ class ArcDiagram extends Component {
 			margin: this.props.margin,
 			pad: this.props.margin / 2,
 			radius: this.props.radius,
-			yfixed: this.props.margin / 2 + this.props.radius
+			yfixed: this.props.margin / 2 + this.props.radius,
+			techHovered: null
 		}
 	}
 
@@ -50,11 +51,14 @@ class ArcDiagram extends Component {
 
 	renderNodes(nodes, radius) {
 		return nodes.map((d) => {
+			let fill = (this.state.techHovered === d.name) ? this.props.color || 'white' : 'grey';
 			return (
 				<g transform={`translate(${d.x + radius}, ${d.y})`}
 					key={d.name}
-					style={{cursor: 'pointer'}}
+					style={{cursor: 'pointer', fill: fill}}
 					onClick={ () => this.props.trackFocalTech(d.name) }
+					onMouseEnter={ () => this.setState({techHovered: d.name}) }
+					onMouseLeave={ () => this.setState({techHovered: null}) }
 				>
 					<circle className="techNodes" cx={-radius} cy={radius * 2} r={radius}/>
 					<text transform={'rotate(-70)'}>{d.name}</text>
@@ -82,7 +86,7 @@ class ArcDiagram extends Component {
 	            // arc will always be drawn around (0, 0)
 	            // shift so (0, 0) will be between source and target
 			    		xshift = nodesHash[source] + (nodesHash[target] - nodesHash[source]) / 2;
-			    		yshift = this.state.yfixed;
+			    		yshift = this.state.yfixed + 10;
 
 			    		// get x distance between source and target
 			    		xdist = Math.abs(nodesHash[source] - nodesHash[target]);
@@ -97,8 +101,19 @@ class ArcDiagram extends Component {
 								    .startAngle(Math.PI / 2)
 								    .endAngle(Math.PI * 1.5);
 
+			    		let fill, strokeWidth
+			    		if (this.state.techHovered === source || this.state.techHovered === target) {
+			    			fill = this.props.color || 'white';
+			    			strokeWidth = 2;
+			    		} else {
+			    			fill = 'grey';
+			    			strokeWidth = .5;
+			    		}
+
 			    		return (
 			    			<path className="links"
+  								stroke={fill}
+  								strokeWidth={strokeWidth}
 			    				transform={`translate(${xshift},${yshift + this.state.radius + 2})`}
 			    				d={arc()}
 			    			/>
