@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Hero from '../containers/Hero';
 import ProjectsHome from '../containers/ProjectsHome';
 import Techs from '../containers/Techs';

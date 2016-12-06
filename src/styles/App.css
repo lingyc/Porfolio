@@ -127,9 +127,14 @@ ol, ul {
   border-bottom: .5px solid #eee;
 }
 
+.mainMsg .menuItems,
+.projectWrapper .menuItems {
+  top: 2%;
+}
+
 .menuItems {
   position: absolute;
-  font: 400 15px Lato;
+  font: 100 15px Lato;
   text-align: right;
   display: flex;
   flex-direction: row;
@@ -142,7 +147,8 @@ ol, ul {
   padding: 0 10px 0 10px;
 }
 
-.menuItems a {
+.menuItems a,
+.projectWrapper .menuItems a{
   color: black;
 }
 

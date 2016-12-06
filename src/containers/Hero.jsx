@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { Icon } from 'semantic-ui-react'
+import { Icon } from 'semantic-ui-react';
+import Menu from '../components/Menu';
 
 class Hero extends Component {
 	render() {
 		return (
 			<div className="hero">
 				<div className="mainMsg">
+					<Menu/>
 					<h3>LING CHEN</h3>
 					<h1>Web Developer</h1>
 

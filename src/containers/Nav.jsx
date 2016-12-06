@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import { VelocityComponent } from 'velocity-react';
+import Menu from '../components/Menu';
 
 class Nav extends Component {
 	constructor(props) {
@@ -11,18 +11,10 @@ class Nav extends Component {
 	}
 
 	render() {
-		const menu = (
-			<ul className="menuItems">
-				<li><Link to="/top"> HOME </Link></li>
-				<li><Link to="/projects"> PROJECTS </Link></li>
-				<li><Link to="/about"> ABOUT </Link></li>
-			</ul>
-		);
-
 		return (
 			<VelocityComponent animation={(this.props.navPanelOpen) ? {height: '11%'} : {height: '0%'}} duration={500}>
 				<div className="nav" style={{height: '0%'}}>
-					{(this.props.navPanelOpen) ? menu : ''}
+					{(this.props.navPanelOpen) ? <Menu /> : ''}
 				</div>
 			</VelocityComponent>
 		);
