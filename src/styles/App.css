@@ -147,6 +147,10 @@ ol, ul {
   padding: 0 10px 0 10px;
 }
 
+.mainMsg .menuItems a {
+  color: white;
+}
+
 .menuItems a,
 .projectWrapper .menuItems a{
   color: black;
