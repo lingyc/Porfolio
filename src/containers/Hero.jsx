@@ -31,6 +31,10 @@ class Hero extends Component {
 						<Icon name='mobile' size='big'/>
 					</a>
 
+					<a href='http://bit.ly/2dFCqbW' target="_blank">
+						<Icon name='file text' size='big'/>
+					</a>
+
 				</div>
 			</div>
 		);
